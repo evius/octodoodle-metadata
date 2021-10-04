@@ -1,11 +1,17 @@
 import { Command, flags } from '@oclif/command';
 import * as signale from 'signale';
-import { TRAIT_TYPE, TRAIT_TIER, MANDATORY_TRAIT_ZONES, TRAIT_TYPE_KEYS } from '../model/constants';
+import {
+  TRAIT_TYPE,
+  TRAIT_TIER,
+  MANDATORY_TRAIT_ZONES,
+} from '../model/constants';
 import * as Chance from 'chance';
 import * as fs from 'fs';
 import { TierProbabilities } from '../model/TierProbabilities';
 import rules from '../rules';
-const { performance } = require('perf_hooks');
+import cli from 'cli-ux';
+import { performance } from 'perf_hooks';
+import * as ProgressBar from 'progress';
 
 const NUM_REQUIRED = 9001;
 
@@ -15,16 +21,20 @@ function getTraitArray(type: TRAIT_TYPE, traits: any) {
   return Object.values(TRAIT_TIER).flatMap((tier) => traits[type][tier]);
 }
 
-function getWeightedArray(type: TRAIT_TYPE, tierProbabilities: TierProbabilities, traits: any) {
+function getWeightedArray(
+  type: TRAIT_TYPE,
+  tierProbabilities: TierProbabilities,
+  traits: any
+) {
   const weightedArray: Array<number> = [];
 
   Object.values(TRAIT_TIER)
-      .map((tier) => tier as TRAIT_TIER)
-      .forEach((tier) => {
-    traits[type][tier].forEach(() => {
-      weightedArray.push(tierProbabilities[tier]);
+    .map((tier) => tier as TRAIT_TIER)
+    .forEach((tier) => {
+      traits[type][tier].forEach(() => {
+        weightedArray.push(tierProbabilities[tier]);
+      });
     });
-  });
 
   return weightedArray;
 }
@@ -43,7 +53,11 @@ function getTraitTier(type: TRAIT_TYPE, trait: string, traits: any) {
   throw new Error(`Trait not found: ${type}:${trait}`);
 }
 
-function getTrait(type: TRAIT_TYPE, traitArray: Array<string>, weightedArray: Array<number>): string {
+function getTrait(
+  type: TRAIT_TYPE,
+  traitArray: Array<string>,
+  weightedArray: Array<number>
+): string {
   let mandatoryMultiplier = 0; // A multiplier for whether a zone is mandatory or not.
   if (MANDATORY_TRAIT_ZONES.indexOf(type) >= 0) {
     mandatoryMultiplier = 1; // If mandatory, the multiplier is always 1
@@ -57,12 +71,21 @@ function getTrait(type: TRAIT_TYPE, traitArray: Array<string>, weightedArray: Ar
 }
 
 export default class GenerateTraits extends Command {
-  static description = 'Generates traits using the given trait types (default count is 9001';
+  static description =
+    'Generates traits using the given trait types (default count is 9001';
 
   static examples = [
     `$ cryptopi-meta generate-traits trait-types.json -o traits.json -n 9001`,
     `$ cryptopi-meta generate-traits trait-types.json --output traits.json -n 9001`,
     `$ cryptopi-meta generate-traits trait-types.json`,
+  ];
+
+  static args = [
+    {
+      name: 'traitTypesFileName',
+      required: true,
+      description: 'The path to the Trait types JSON file.',
+    },
   ];
 
   static flags = {
@@ -78,61 +101,84 @@ export default class GenerateTraits extends Command {
   };
 
   async run() {
-    const { flags } = this.parse(GenerateTraits);
+    const { flags, args } = this.parse(GenerateTraits);
 
-    const traits: any = {};
+    signale.info(`Getting trait-types from ${args.traitTypesFileName}`);
+
+    const traitTypes = JSON.parse(
+      fs.readFileSync(args.traitTypesFileName).toString()
+    );
+
+    signale.success(' Trait types loaded');
 
     const t0 = performance.now();
 
-  let generatedCount = 0; // Actual number of generated traits
-  let generationAttemptCount = 0; // The total number of iterations in attempting to create traits
+    let generatedCount = 0; // Actual number of generated traits
+    let generationAttemptCount = 0; // The total number of iterations in attempting to create traits
 
-  const tierProbabilities: TierProbabilities = {
-    [TRAIT_TIER.TIER_1]: 69,
-    [TRAIT_TIER.TIER_2]: 30,
-    [TRAIT_TIER.TIER_3]: 1,
-  };
+    const tierProbabilities: TierProbabilities = {
+      [TRAIT_TIER.TIER_1]: 69,
+      [TRAIT_TIER.TIER_2]: 30,
+      [TRAIT_TIER.TIER_3]: 1,
+    };
 
-  while (generatedCount < NUM_REQUIRED) {
-    const selectedTraits: string[] = [];
+    const traits: Array<string[]> = [];
+    const numRequired: number = Number(flags.number) || NUM_REQUIRED;
 
-    Object.values(TRAIT_TYPE)
-      .map((type) => type as TRAIT_TYPE)
-      .forEach((type) => {
-      const traitArray = getTraitArray(type, traits);
-      const weightedArray = getWeightedArray(type, tierProbabilities, traits);
+    const progressBar = new ProgressBar('  generating |:bar| :percent', {
+      total: numRequired,
+    });
 
-      const selectedTrait = getTrait(type, traitArray, weightedArray);
-      const selectedTraitTier = selectedTrait
-        ? getTraitTier(type, selectedTrait, traits)
-        : null;
+    cli.action.start('Generating traits');
 
-      selectedTraits.push(selectedTrait);
+    while (generatedCount < numRequired) {
+      const selectedTraits: string[] = [];
 
-      if (selectedTraitTier) {
-        // Update new probabilities based on selection
-        switch (selectedTraitTier) {
-          case TRAIT_TIER.TIER_2:
-            tierProbabilities[TRAIT_TIER.TIER_2] /= 2; // Rare items get increasingly rare.
-            break;
-          case TRAIT_TIER.TIER_3:
-            tierProbabilities[TRAIT_TIER.TIER_2] = 0; // No more chances if you get an extremely rare
-        }
+      Object.values(TRAIT_TYPE)
+        .map((type) => type as TRAIT_TYPE)
+        .forEach((type) => {
+          const traitArray = getTraitArray(type, traitTypes);
+          const weightedArray = getWeightedArray(
+            type,
+            tierProbabilities,
+            traitTypes
+          );
+
+          const selectedTrait = getTrait(type, traitArray, weightedArray);
+          const selectedTraitTier = selectedTrait
+            ? getTraitTier(type, selectedTrait, traitTypes)
+            : null;
+
+          selectedTraits.push(selectedTrait);
+
+          if (selectedTraitTier) {
+            // Update new probabilities based on selection
+            switch (selectedTraitTier) {
+              case TRAIT_TIER.TIER_2:
+                tierProbabilities[TRAIT_TIER.TIER_2] /= 2; // Rare items get increasingly rare.
+                break;
+              case TRAIT_TIER.TIER_3:
+                tierProbabilities[TRAIT_TIER.TIER_2] = 0; // No more chances if you get an extremely rare
+            }
+          }
+        });
+
+      let validatedTraits: string[] | null = selectedTraits;
+      rules.forEach((rule) => {
+        validatedTraits = rule(validatedTraits as string[], traits);
+      });
+
+      if (validatedTraits) {
+        traits.push(validatedTraits);
+        generatedCount++;
+        progressBar.tick();
       }
-    });
 
-    let validatedTraits: string[] | null = selectedTraits;
-    rules.forEach((rule) => {
-      validatedTraits = rule(validatedTraits as string[], traits);
-    });
-
-    if (validatedTraits) {
-      traits.push(validatedTraits);
-      generatedCount++;
+      generationAttemptCount += 1;
     }
 
-    generationAttemptCount++;
-  }
+    cli.action.stop('Traits generated');
+    const t1 = performance.now();
 
     let outputFile = 'traits.json';
     if (flags.output) {
@@ -143,6 +189,8 @@ export default class GenerateTraits extends Command {
 
     fs.writeFileSync(outputFile, JSON.stringify(traits));
 
-    signale.success(' complete');
+    signale.success(' Trait Generation complete');
+    signale.info('Total Time: ', Math.round(t1 - t0));
+    signale.info('Total Iterations: ', generationAttemptCount);
   }
 }
