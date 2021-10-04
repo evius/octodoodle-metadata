@@ -11,7 +11,6 @@ import { TierProbabilities } from '../model/TierProbabilities';
 import rules from '../rules';
 import cli from 'cli-ux';
 import { performance } from 'perf_hooks';
-import * as ProgressBar from 'progress';
 
 const NUM_REQUIRED = 9001;
 
@@ -100,22 +99,10 @@ export default class GenerateTraits extends Command {
     }),
   };
 
-  async run() {
-    const { flags, args } = this.parse(GenerateTraits);
-
-    signale.info(`Getting trait-types from ${args.traitTypesFileName}`);
-
-    const traitTypes = JSON.parse(
-      fs.readFileSync(args.traitTypesFileName).toString()
-    );
-
-    signale.success(' Trait types loaded');
-
-    const t0 = performance.now();
-
-    let generatedCount = 0; // Actual number of generated traits
-    let generationAttemptCount = 0; // The total number of iterations in attempting to create traits
-
+  generateTraits(
+    numRequired: number,
+    traitTypes: any
+  ): { traits: Array<string[]>; generationAttemptCount: number } {
     const tierProbabilities: TierProbabilities = {
       [TRAIT_TIER.TIER_1]: 69,
       [TRAIT_TIER.TIER_2]: 30,
@@ -123,13 +110,16 @@ export default class GenerateTraits extends Command {
     };
 
     const traits: Array<string[]> = [];
-    const numRequired: number = Number(flags.number) || NUM_REQUIRED;
+    let generatedCount = 0; // Actual number of generated traits
+    let generationAttemptCount = 0; // The total number of iterations in attempting to create traits
 
-    const progressBar = new ProgressBar('  generating |:bar| :percent', {
-      total: numRequired,
+    const progressBar = cli.progress({
+      format: '  Generating [ {bar} ] {percentage}% | {value}/{total}',
+      barCompleteChar: '\u2588',
+      barIncompleteChar: '\u2591',
     });
 
-    cli.action.start('Generating traits');
+    progressBar.start(numRequired, 0);
 
     while (generatedCount < numRequired) {
       const selectedTraits: string[] = [];
@@ -170,14 +160,41 @@ export default class GenerateTraits extends Command {
 
       if (validatedTraits) {
         traits.push(validatedTraits);
-        generatedCount++;
-        progressBar.tick();
+        generatedCount += 1;
+        progressBar.update(generatedCount);
       }
 
       generationAttemptCount += 1;
     }
 
-    cli.action.stop('Traits generated');
+    progressBar.stop();
+
+    return {
+      traits,
+      generationAttemptCount,
+    };
+  }
+
+  async run() {
+    const { flags, args } = this.parse(GenerateTraits);
+
+    signale.info(`Getting trait-types from ${args.traitTypesFileName}`);
+
+    const traitTypes = JSON.parse(
+      fs.readFileSync(args.traitTypesFileName).toString()
+    );
+
+    signale.success(' Trait types loaded');
+
+    const t0 = performance.now();
+
+    const numRequired: number = Number(flags.number) || NUM_REQUIRED;
+
+    const { generationAttemptCount, traits } = this.generateTraits(
+      numRequired,
+      traitTypes
+    );
+
     const t1 = performance.now();
 
     let outputFile = 'traits.json';
