@@ -1,0 +1,191 @@
+{
+  "Background": {
+    "Tier 1": [
+      "pop",
+      "hafzi",
+      "rurtu",
+      "me",
+      "kigovew",
+      "mif",
+      "lew",
+      "pij",
+      "rumudu",
+      "kunhebew",
+      "ob",
+      "mat",
+      "bouhgib",
+      "rusak",
+      "ad"
+    ],
+    "Tier 2": ["kido", "jopud", "useha", "seajpum"],
+    "Tier 3": ["ket"]
+  },
+  "Skin": {
+    "Tier 1": [
+      "vu",
+      "fo",
+      "ihasabiz",
+      "tiz",
+      "go",
+      "be",
+      "hi",
+      "zojwotu",
+      "puwokej",
+      "vitbavev",
+      "kojcos",
+      "maraluleh",
+      "tuf",
+      "roeni",
+      "ehiuceno"
+    ],
+    "Tier 2": ["nafi", "tachuv", "ponu", "je"],
+    "Tier 3": ["bab"]
+  },
+  "Mouth": {
+    "Tier 1": [
+      "telno",
+      "romokeija",
+      "pe",
+      "ta",
+      "vat",
+      "de",
+      "wufazi",
+      "ligur",
+      "hevu",
+      "muur",
+      "ijoruv",
+      "foc",
+      "ranbibu",
+      "vuunnok",
+      "wi"
+    ],
+    "Tier 2": ["zo", "vopaf", "arohotev", "muh"],
+    "Tier 3": ["fiif"]
+  },
+  "Eyes": {
+    "Tier 1": [
+      "gifema",
+      "juwe",
+      "ikvij",
+      "tobme",
+      "hoal",
+      "daeco",
+      "jut",
+      "jiwho",
+      "ed",
+      "ep",
+      "uhereku",
+      "no",
+      "jutuwo",
+      "etbizo",
+      "kekafe"
+    ],
+    "Tier 2": ["veji", "olero", "tu", "pewifi"],
+    "Tier 3": ["anu"]
+  },
+  "Clothing": {
+    "Tier 1": [
+      "acuta",
+      "ivu",
+      "lok",
+      "rum",
+      "va",
+      "suhhuhver",
+      "icu",
+      "vah",
+      "wasujuk",
+      "pet",
+      "ekina",
+      "lek",
+      "fagij",
+      "gar",
+      "rumvaram"
+    ],
+    "Tier 2": ["ho", "juhcu", "ladku", "zifago"],
+    "Tier 3": ["rusref"]
+  },
+  "Head": {
+    "Tier 1": [
+      "uf",
+      "ju",
+      "tamafha",
+      "zeweitu",
+      "hogakuf",
+      "usosefrev",
+      "son",
+      "fudsoeku",
+      "ugvoj",
+      "mah",
+      "tigseli",
+      "we",
+      "rizmi",
+      "zus",
+      "coh"
+    ],
+    "Tier 2": ["nus", "wa", "fihebo", "mopco"],
+    "Tier 3": ["tek"]
+  },
+  "Tentacle 1": {
+    "Tier 1": [
+      "kiusamon",
+      "utgapton",
+      "vujil",
+      "gigut",
+      "gi",
+      "lazahlu",
+      "fuwuf",
+      "ig",
+      "aktigud",
+      "ej",
+      "feuhuse",
+      "mekedev",
+      "len",
+      "bowif",
+      "mas"
+    ],
+    "Tier 2": ["wiz", "te", "mejat", "mehi"],
+    "Tier 3": ["ug"]
+  },
+  "Tentacle 2": {
+    "Tier 1": [
+      "ucu",
+      "sisobjus",
+      "tik",
+      "cifner",
+      "ciucalij",
+      "zeguzuc",
+      "gidzogdu",
+      "ezzem",
+      "lulu",
+      "kubu",
+      "rig",
+      "rudu",
+      "zadowcuf",
+      "vukte",
+      "avokacov"
+    ],
+    "Tier 2": ["efefu", "kejupo", "bupihef", "rus"],
+    "Tier 3": ["pulacwo"]
+  },
+  "Tentacle 3": {
+    "Tier 1": [
+      "binu",
+      "evapepne",
+      "kogpefar",
+      "fa",
+      "eji",
+      "vit",
+      "mufhi",
+      "forsenget",
+      "jujvo",
+      "but",
+      "le",
+      "uku",
+      "tawal",
+      "ziecnu",
+      "hebmisa"
+    ],
+    "Tier 2": ["zaludgar", "lav", "elanevrel", "hobsol"],
+    "Tier 3": ["gauna"]
+  }
+}
