@@ -326,6 +326,16 @@
         "signature": "04b2123e996b5c865eec449a1c670c10cee24d12b9f1a97979c0dbbceecc3384",
         "affectsGlobalScope": false
       },
+      "./src/commands/create-images.ts": {
+        "version": "47391ca1ec1f32befdaaab7e209554d10a4e8b446d822fbe85a0019bbfb0314a",
+        "signature": "55741638106507dbf5fb38c105c7ea6870629f1078fde64734f7acf514141c6f",
+        "affectsGlobalScope": false
+      },
+      "./src/commands/create-metadata.ts": {
+        "version": "2867777d990f3d6d2caaf8d94c1f572bd823282970b7e8d1fee0dc7bec44bd58",
+        "signature": "4821b5f10b7f1bf0b28e87a0280b321265d84485f661d8bce68553880fb288f1",
+        "affectsGlobalScope": false
+      },
       "./node_modules/@types/node/globals.d.ts": {
         "version": "fb928b21f5a16a1d64a8e2e74a3f389ace89da74820f070f893221213c50aa3c",
         "signature": "fb928b21f5a16a1d64a8e2e74a3f389ace89da74820f070f893221213c50aa3c",
@@ -561,7 +571,7 @@
         "signature": "a4940aef29b1d750ba8f4f574259d769c5b8022089435c735afb47d4f44e73d6",
         "affectsGlobalScope": false
       },
-      "./src/model/tierprobabilities.ts": {
+      "./src/model/TierProbabilities.ts": {
         "version": "7e36392ae44e22ae8b0a367bd6b6a52e9785df02180cd3825d992bd1363d7926",
         "signature": "6aa02795b940f0367ca2abc8c090618ed57b9240978ef6a9b3186f395a6b7ef8",
         "affectsGlobalScope": false
@@ -636,39 +646,124 @@
         "signature": "879932caaf4a58faf2519a504639b6ace1cf9145505341731cc01e9282e32c1f",
         "affectsGlobalScope": false
       },
-      "./node_modules/@types/progress/index.d.ts": {
-        "version": "eed6c9e45b1d51f2fecda6f2cf833e6fc7af077a2512b6216a1991d284a63260",
-        "signature": "eed6c9e45b1d51f2fecda6f2cf833e6fc7af077a2512b6216a1991d284a63260",
-        "affectsGlobalScope": false
-      },
       "./src/commands/generate-traits.ts": {
-        "version": "875dc8f20da4f70c511c79b64fad9b6daebb3603d47fab67706d09ba71a7df73",
-        "signature": "af7259585b44dd0167635cc9abd57d1560805972219cb64b02afb91139681ef9",
+        "version": "9b2549f0a546c0067b21a6034f6ee5fe2059f33436988eaf94990faacb32c027",
+        "signature": "2c798f2cb2521f403a46a7834ee7d84fc4fb4b7a38a09750e5d769c07902c13f",
         "affectsGlobalScope": false
       },
-      "./src/model/jsonserializable.ts": {
+      "./node_modules/nft.storage/dist/src/platform.d.ts": {
+        "version": "4fd16facf9dbdd2c22b8c8758624c35a58f9e6bc26ca2400d264a3c6706be153",
+        "signature": "4fd16facf9dbdd2c22b8c8758624c35a58f9e6bc26ca2400d264a3c6706be153",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/nft.storage/dist/src/gateway.d.ts": {
+        "version": "831d97053a23ac672b2fdac065d0d86b2c6c5bcfd6a061f3e351779633a0798a",
+        "signature": "831d97053a23ac672b2fdac065d0d86b2c6c5bcfd6a061f3e351779633a0798a",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiformats/types/bases/interface.d.ts": {
+        "version": "930446bf32192f698b78f8ea4b309d8c2cfe02ab5ad78e4db907417405ebf5e7",
+        "signature": "930446bf32192f698b78f8ea4b309d8c2cfe02ab5ad78e4db907417405ebf5e7",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiformats/types/hashes/interface.d.ts": {
+        "version": "a5de53bdfcdca7af39e735be7bbd736c38b1e34eeec36bd6a835a0e37ba23705",
+        "signature": "a5de53bdfcdca7af39e735be7bbd736c38b1e34eeec36bd6a835a0e37ba23705",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiformats/types/cid.d.ts": {
+        "version": "ef706b4970dd8bf7ab414bb981993d4f379845f3592622237bad1b3332fde794",
+        "signature": "ef706b4970dd8bf7ab414bb981993d4f379845f3592622237bad1b3332fde794",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiformats/types/hashes/digest.d.ts": {
+        "version": "853c5447ea8851049c1d008e130d23030d9fe3b5a8405a0ae7e55b00e173692d",
+        "signature": "853c5447ea8851049c1d008e130d23030d9fe3b5a8405a0ae7e55b00e173692d",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiformats/types/hashes/hasher.d.ts": {
+        "version": "fbb30441703cfccfe241fbdb604f01e1e5ac558eec5d3f04fd32281dc9b3cdb9",
+        "signature": "fbb30441703cfccfe241fbdb604f01e1e5ac558eec5d3f04fd32281dc9b3cdb9",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiformats/types/varint.d.ts": {
+        "version": "0d04077273d749e79acaeacf0c42ea3d1139bdf5fc8823d0e64740a5735fbca1",
+        "signature": "0d04077273d749e79acaeacf0c42ea3d1139bdf5fc8823d0e64740a5735fbca1",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiformats/types/bytes.d.ts": {
+        "version": "32b67d761db3999f1e482d0add405b695d3ec5607e07ae4c963a96334c331814",
+        "signature": "32b67d761db3999f1e482d0add405b695d3ec5607e07ae4c963a96334c331814",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiformats/types/index.d.ts": {
+        "version": "1428847d803b8342711c0b22208df4f83590cce15ef2c8f36ba53cea24f4616d",
+        "signature": "1428847d803b8342711c0b22208df4f83590cce15ef2c8f36ba53cea24f4616d",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@ipld/car/types/api.d.ts": {
+        "version": "30d9b4052cd71f8f90cc5d3205950539d27f49803676ec13d4e5b1dd58733c2f",
+        "signature": "30d9b4052cd71f8f90cc5d3205950539d27f49803676ec13d4e5b1dd58733c2f",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/nft.storage/dist/src/lib/interface.d.ts": {
+        "version": "fa21e942e6a606df52a36503a3d12578547a658b4167652a3775ff0d98cf27c8",
+        "signature": "fa21e942e6a606df52a36503a3d12578547a658b4167652a3775ff0d98cf27c8",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/nft.storage/dist/src/token.d.ts": {
+        "version": "b56e13cbc5b25d24eb8dd55c80490136023bc0b54b6bec77f5b1b785b16930bb",
+        "signature": "b56e13cbc5b25d24eb8dd55c80490136023bc0b54b6bec77f5b1b785b16930bb",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/nft.storage/dist/src/lib.d.ts": {
+        "version": "65501e4f0bc2b9f525f8acdf022bb98baaf196b1dffb503212fa77f6b05defe8",
+        "signature": "65501e4f0bc2b9f525f8acdf022bb98baaf196b1dffb503212fa77f6b05defe8",
+        "affectsGlobalScope": false
+      },
+      "./src/commands/upload-images.ts": {
+        "version": "43278b9300919833085a75c5347cf5ce92f1fa512dc47ce309b6cee3a8babc55",
+        "signature": "ca82942231534e551c7450e83a486925a2e8b65806c0634e93bed69f38bea0fd",
+        "affectsGlobalScope": false
+      },
+      "./src/commands/upload-metadata.ts": {
+        "version": "973e0abdca3885a94d0d0ee6cb3c9694ed54aa56e68438f95730a9613b745573",
+        "signature": "302e3e617801e749a0c9b0bdc59c8ad31f8eb3ba95058f3b3b97ee4c48f35a08",
+        "affectsGlobalScope": false
+      },
+      "./src/commands/validate-trait-files.ts": {
+        "version": "80ccaad60835ebda2b68092af2dd1ee6bc3b6b0ba5d2092d61bdc54bc896f18e",
+        "signature": "a27c6fb2540d6d8b86fefbae1dbcb93066089ebaf6a894dbd69ebad91045bce9",
+        "affectsGlobalScope": false
+      },
+      "./src/model/JsonSerializable.ts": {
         "version": "dfe9e987f7977ca629c9b588966040031ded5656c220416c89cb879138eaa527",
         "signature": "48facb4fc2f69d441e857b3c5f5046210cd0607145a7359c2af4f3e24db87e00",
         "affectsGlobalScope": false
       },
-      "./src/model/traittier.ts": {
+      "./src/model/TraitTier.ts": {
         "version": "287546b2d5a317e250a4a183cab23f5fb034bef0e15990baaa99d8217ae1ece3",
         "signature": "4f0df1c65302371c1b59e415214e0e56093d0750ae59181edb42aa40ce01ed99",
         "affectsGlobalScope": false
       },
-      "./src/model/traittype.ts": {
+      "./src/model/TraitType.ts": {
         "version": "7eb94614d7b1cfb4ddf8f0449e97fec59110f070c9e6fff60c76279b9e7370c3",
         "signature": "e02098a85cf3c467ce3e0f29f4198e39aa2880fad927c5c858911a0cb34a645c",
         "affectsGlobalScope": false
       },
-      "./src/model/trait.ts": {
+      "./src/model/Trait.ts": {
         "version": "ac090ec1e571932f5bd9fc908466d2e001e86bfb168922664f62e6f556ae2c14",
         "signature": "73b34f6682ec83ca666912fd0d27af5b80e1440ac5699be0849ace608897b099",
         "affectsGlobalScope": false
       },
-      "./src/model/traitconfiguration.ts": {
+      "./src/model/TraitConfiguration.ts": {
         "version": "0c5ef0ae12f0ddcb0263f61b4e96947001261add408892e059da26168d836904",
         "signature": "891a8e8fc4a2eca505dc6cb6506fd76a4f0ea4ce2032289d1f52b9a9df66c391",
+        "affectsGlobalScope": false
+      },
+      "./src/model/progress-log.ts": {
+        "version": "b27ed718abe75bd6ca4314271399df3f24ba531407c9c98388fee118223d412a",
+        "signature": "845e7997e7e96bd5c712cf41fddf725e2cad46daf7b1b6ae749cc8c16588a87a",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/chai/index.d.ts": {
@@ -707,8 +802,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/lodash/common/collection.d.ts": {
-        "version": "0c75b204aed9cf6ff1c7b4bed87a3ece0d9d6fc857a6350c0c95ed0c38c814e8",
-        "signature": "0c75b204aed9cf6ff1c7b4bed87a3ece0d9d6fc857a6350c0c95ed0c38c814e8",
+        "version": "d88a479cccf787b4aa82362150fbeba5211a32dbfafa7b92ba6995ecaf9a1a89",
+        "signature": "d88a479cccf787b4aa82362150fbeba5211a32dbfafa7b92ba6995ecaf9a1a89",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/lodash/common/date.d.ts": {
@@ -766,14 +861,49 @@
         "signature": "c4c03cf65951d980ba618ae9601d10438730803fc9c8a1f7b34af8739981e205",
         "affectsGlobalScope": true
       },
+      "./node_modules/@types/normalize-package-data/index.d.ts": {
+        "version": "6fa0008bf91a4cc9c8963bace4bba0bd6865cbfa29c3e3ccc461155660fb113a",
+        "signature": "6fa0008bf91a4cc9c8963bace4bba0bd6865cbfa29c3e3ccc461155660fb113a",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/progress/index.d.ts": {
+        "version": "eed6c9e45b1d51f2fecda6f2cf833e6fc7af077a2512b6216a1991d284a63260",
+        "signature": "eed6c9e45b1d51f2fecda6f2cf833e6fc7af077a2512b6216a1991d284a63260",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/retry/index.d.ts": {
+        "version": "58a3914b1cce4560d9ad6eee2b716caaa030eda0a90b21ca2457ea9e2783eaa3",
+        "signature": "58a3914b1cce4560d9ad6eee2b716caaa030eda0a90b21ca2457ea9e2783eaa3",
+        "affectsGlobalScope": false
+      },
       "./node_modules/@sinonjs/fake-timers/types/fake-timers-src.d.ts": {
         "version": "6b40029289530423f407a22755c85b81740f9acfd88d2b53564f8c1657c26660",
         "signature": "6b40029289530423f407a22755c85b81740f9acfd88d2b53564f8c1657c26660",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/sinon/index.d.ts": {
-        "version": "8ebb20b6ff4b4b3ce91b146e46e1167cf1ace0cfd49d8d89c1c315ac1189bede",
-        "signature": "8ebb20b6ff4b4b3ce91b146e46e1167cf1ace0cfd49d8d89c1c315ac1189bede",
+        "version": "86a04d7ce86bcb5814079939ddc37dc76a82f8b6170a79518ef6dfc2c6f8c00c",
+        "signature": "86a04d7ce86bcb5814079939ddc37dc76a82f8b6170a79518ef6dfc2c6f8c00c",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/varint/index.d.ts": {
+        "version": "a35c3c9a957697fd70aef0bed183fcf1258264c877bf2a12dcd80d6b0c2a6fe4",
+        "signature": "a35c3c9a957697fd70aef0bed183fcf1258264c877bf2a12dcd80d6b0c2a6fe4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/bn.js/index.d.ts": {
+        "version": "bc6dd50ac2fc9a7ca6488811b116bd0ddd606338db0bb97852c8fcf757e2d7f5",
+        "signature": "bc6dd50ac2fc9a7ca6488811b116bd0ddd606338db0bb97852c8fcf757e2d7f5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/pbkdf2/index.d.ts": {
+        "version": "a73a445c1e0a6d0f8b48e8eb22dc9d647896783a7f8991cbbc31c0d94bf1f5a2",
+        "signature": "a73a445c1e0a6d0f8b48e8eb22dc9d647896783a7f8991cbbc31c0d94bf1f5a2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/secp256k1/index.d.ts": {
+        "version": "3dce33e7eb25594863b8e615f14a45ab98190d85953436750644212d8a18c066",
+        "signature": "3dce33e7eb25594863b8e615f14a45ab98190d85953436750644212d8a18c066",
         "affectsGlobalScope": false
       }
     },
@@ -790,6 +920,18 @@
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
+      "../node_modules/@types/bn.js/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@types/pbkdf2/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@types/secp256k1/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/@ipld/car/types/api.d.ts": [
+        "./node_modules/multiformats/types/cid.d.ts"
+      ],
       "./node_modules/@oclif/command/lib/command.d.ts": [
         "./node_modules/@oclif/command/lib/flags.d.ts",
         "./node_modules/@oclif/config/lib/index.d.ts",
@@ -1217,6 +1359,9 @@
       "./node_modules/@types/sinon/index.d.ts": [
         "./node_modules/@sinonjs/fake-timers/types/fake-timers-src.d.ts"
       ],
+      "./node_modules/@types/varint/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
       "./node_modules/cli-ux/lib/config.d.ts": [
         "./node_modules/cli-ux/lib/action/base.d.ts"
       ],
@@ -1236,6 +1381,45 @@
       "./node_modules/cli-ux/lib/styled/table.d.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
+      "./node_modules/multiformats/types/cid.d.ts": [
+        "./node_modules/multiformats/types/bases/interface.d.ts",
+        "./node_modules/multiformats/types/hashes/interface.d.ts"
+      ],
+      "./node_modules/multiformats/types/hashes/digest.d.ts": [
+        "./node_modules/multiformats/types/hashes/interface.d.ts"
+      ],
+      "./node_modules/multiformats/types/hashes/hasher.d.ts": [
+        "./node_modules/multiformats/types/hashes/digest.d.ts",
+        "./node_modules/multiformats/types/hashes/interface.d.ts"
+      ],
+      "./node_modules/multiformats/types/index.d.ts": [
+        "./node_modules/multiformats/types/bytes.d.ts",
+        "./node_modules/multiformats/types/cid.d.ts",
+        "./node_modules/multiformats/types/hashes/digest.d.ts",
+        "./node_modules/multiformats/types/hashes/hasher.d.ts",
+        "./node_modules/multiformats/types/varint.d.ts"
+      ],
+      "./node_modules/nft.storage/dist/src/lib.d.ts": [
+        "./node_modules/nft.storage/dist/src/gateway.d.ts",
+        "./node_modules/nft.storage/dist/src/lib/interface.d.ts",
+        "./node_modules/nft.storage/dist/src/platform.d.ts",
+        "./node_modules/nft.storage/dist/src/token.d.ts"
+      ],
+      "./node_modules/nft.storage/dist/src/lib/interface.d.ts": [
+        "./node_modules/@ipld/car/types/api.d.ts",
+        "./node_modules/multiformats/types/index.d.ts"
+      ],
+      "./node_modules/nft.storage/dist/src/token.d.ts": [
+        "./node_modules/nft.storage/dist/src/gateway.d.ts",
+        "./node_modules/nft.storage/dist/src/lib/interface.d.ts",
+        "./node_modules/nft.storage/dist/src/platform.d.ts"
+      ],
+      "./src/commands/create-images.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
+      "./src/commands/create-metadata.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
       "./src/commands/generate-trait-types.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@types/chance/index.d.ts",
@@ -1248,28 +1432,42 @@
         "./node_modules/@types/chance/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/perf_hooks.d.ts",
-        "./node_modules/@types/progress/index.d.ts",
         "./node_modules/@types/signale/index.d.ts",
         "./node_modules/cli-ux/lib/index.d.ts",
+        "./src/model/TierProbabilities.ts",
         "./src/model/constants.ts",
-        "./src/model/tierprobabilities.ts",
         "./src/rules/index.ts"
+      ],
+      "./src/commands/upload-images.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/signale/index.d.ts",
+        "./node_modules/nft.storage/dist/src/lib.d.ts"
+      ],
+      "./src/commands/upload-metadata.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
+      "./src/commands/validate-trait-files.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
       ],
       "./src/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
-      "./src/model/tierprobabilities.ts": [
+      "./src/model/TierProbabilities.ts": [
         "./src/model/constants.ts"
       ],
-      "./src/model/trait.ts": [
-        "./src/model/jsonserializable.ts",
-        "./src/model/traittier.ts",
-        "./src/model/traittype.ts"
+      "./src/model/Trait.ts": [
+        "./src/model/JsonSerializable.ts",
+        "./src/model/TraitTier.ts",
+        "./src/model/TraitType.ts"
       ],
-      "./src/model/traitconfiguration.ts": [
-        "./src/model/jsonserializable.ts",
-        "./src/model/traittier.ts",
-        "./src/model/traittype.ts"
+      "./src/model/TraitConfiguration.ts": [
+        "./src/model/JsonSerializable.ts",
+        "./src/model/TraitTier.ts",
+        "./src/model/TraitType.ts"
+      ],
+      "./src/model/progress-log.ts": [
+        "./node_modules/@types/node/fs.d.ts"
       ],
       "./src/rules/index.ts": [
         "./src/rules/dedup.ts",
@@ -1277,6 +1475,18 @@
       ]
     },
     "exportedModulesMap": {
+      "../node_modules/@types/bn.js/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@types/pbkdf2/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@types/secp256k1/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/@ipld/car/types/api.d.ts": [
+        "./node_modules/multiformats/types/cid.d.ts"
+      ],
       "./node_modules/@oclif/command/lib/command.d.ts": [
         "./node_modules/@oclif/command/lib/flags.d.ts",
         "./node_modules/@oclif/config/lib/index.d.ts",
@@ -1704,6 +1914,9 @@
       "./node_modules/@types/sinon/index.d.ts": [
         "./node_modules/@sinonjs/fake-timers/types/fake-timers-src.d.ts"
       ],
+      "./node_modules/@types/varint/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
+      ],
       "./node_modules/cli-ux/lib/config.d.ts": [
         "./node_modules/cli-ux/lib/action/base.d.ts"
       ],
@@ -1723,6 +1936,45 @@
       "./node_modules/cli-ux/lib/styled/table.d.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
+      "./node_modules/multiformats/types/cid.d.ts": [
+        "./node_modules/multiformats/types/bases/interface.d.ts",
+        "./node_modules/multiformats/types/hashes/interface.d.ts"
+      ],
+      "./node_modules/multiformats/types/hashes/digest.d.ts": [
+        "./node_modules/multiformats/types/hashes/interface.d.ts"
+      ],
+      "./node_modules/multiformats/types/hashes/hasher.d.ts": [
+        "./node_modules/multiformats/types/hashes/digest.d.ts",
+        "./node_modules/multiformats/types/hashes/interface.d.ts"
+      ],
+      "./node_modules/multiformats/types/index.d.ts": [
+        "./node_modules/multiformats/types/bytes.d.ts",
+        "./node_modules/multiformats/types/cid.d.ts",
+        "./node_modules/multiformats/types/hashes/digest.d.ts",
+        "./node_modules/multiformats/types/hashes/hasher.d.ts",
+        "./node_modules/multiformats/types/varint.d.ts"
+      ],
+      "./node_modules/nft.storage/dist/src/lib.d.ts": [
+        "./node_modules/nft.storage/dist/src/gateway.d.ts",
+        "./node_modules/nft.storage/dist/src/lib/interface.d.ts",
+        "./node_modules/nft.storage/dist/src/platform.d.ts",
+        "./node_modules/nft.storage/dist/src/token.d.ts"
+      ],
+      "./node_modules/nft.storage/dist/src/lib/interface.d.ts": [
+        "./node_modules/@ipld/car/types/api.d.ts",
+        "./node_modules/multiformats/types/index.d.ts"
+      ],
+      "./node_modules/nft.storage/dist/src/token.d.ts": [
+        "./node_modules/nft.storage/dist/src/gateway.d.ts",
+        "./node_modules/nft.storage/dist/src/lib/interface.d.ts",
+        "./node_modules/nft.storage/dist/src/platform.d.ts"
+      ],
+      "./src/commands/create-images.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
+      "./src/commands/create-metadata.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
       "./src/commands/generate-trait-types.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@oclif/parser/lib/flags.d.ts"
@@ -1731,27 +1983,40 @@
         "./node_modules/@oclif/command/lib/index.d.ts",
         "./node_modules/@oclif/parser/lib/flags.d.ts"
       ],
+      "./src/commands/upload-images.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
+      "./src/commands/upload-metadata.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
+      "./src/commands/validate-trait-files.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts"
+      ],
       "./src/index.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
-      "./src/model/tierprobabilities.ts": [
+      "./src/model/TierProbabilities.ts": [
         "./src/model/constants.ts"
       ],
-      "./src/model/trait.ts": [
-        "./src/model/jsonserializable.ts",
-        "./src/model/traittier.ts",
-        "./src/model/traittype.ts"
+      "./src/model/Trait.ts": [
+        "./src/model/JsonSerializable.ts",
+        "./src/model/TraitTier.ts",
+        "./src/model/TraitType.ts"
       ],
-      "./src/model/traitconfiguration.ts": [
-        "./src/model/jsonserializable.ts",
-        "./src/model/traittier.ts",
-        "./src/model/traittype.ts"
+      "./src/model/TraitConfiguration.ts": [
+        "./src/model/JsonSerializable.ts",
+        "./src/model/TraitTier.ts",
+        "./src/model/TraitType.ts"
       ],
       "./src/rules/index.ts": [
         "./src/rules/dedup.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "../node_modules/@types/bn.js/index.d.ts",
+      "../node_modules/@types/pbkdf2/index.d.ts",
+      "../node_modules/@types/secp256k1/index.d.ts",
+      "./node_modules/@ipld/car/types/api.d.ts",
       "./node_modules/@oclif/command/lib/command.d.ts",
       "./node_modules/@oclif/command/lib/flags.d.ts",
       "./node_modules/@oclif/command/lib/index.d.ts",
@@ -1842,9 +2107,12 @@
       "./node_modules/@types/node/vm.d.ts",
       "./node_modules/@types/node/worker_threads.d.ts",
       "./node_modules/@types/node/zlib.d.ts",
+      "./node_modules/@types/normalize-package-data/index.d.ts",
       "./node_modules/@types/progress/index.d.ts",
+      "./node_modules/@types/retry/index.d.ts",
       "./node_modules/@types/signale/index.d.ts",
       "./node_modules/@types/sinon/index.d.ts",
+      "./node_modules/@types/varint/index.d.ts",
       "./node_modules/cli-ux/lib/action/base.d.ts",
       "./node_modules/cli-ux/lib/config.d.ts",
       "./node_modules/cli-ux/lib/exit.d.ts",
@@ -1856,6 +2124,301 @@
       "./node_modules/cli-ux/lib/styled/progress.d.ts",
       "./node_modules/cli-ux/lib/styled/table.d.ts",
       "./node_modules/cli-ux/lib/styled/tree.d.ts",
+      "./node_modules/multiformats/types/bases/interface.d.ts",
+      "./node_modules/multiformats/types/bytes.d.ts",
+      "./node_modules/multiformats/types/cid.d.ts",
+      "./node_modules/multiformats/types/hashes/digest.d.ts",
+      "./node_modules/multiformats/types/hashes/hasher.d.ts",
+      "./node_modules/multiformats/types/hashes/interface.d.ts",
+      "./node_modules/multiformats/types/index.d.ts",
+      "./node_modules/multiformats/types/varint.d.ts",
+      "./node_modules/nft.storage/dist/src/gateway.d.ts",
+      "./node_modules/nft.storage/dist/src/lib.d.ts",
+      "./node_modules/nft.storage/dist/src/lib/interface.d.ts",
+      "./node_modules/nft.storage/dist/src/platform.d.ts",
+      [
+        "./node_modules/nft.storage/dist/src/token.d.ts",
+        [
+          {
+            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
+            "start": 465,
+            "length": 20,
+            "code": 2344,
+            "category": 1,
+            "messageText": {
+              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
+              "category": 1,
+              "code": 2344,
+              "next": [
+                {
+                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
+                  "category": 1,
+                  "code": 2322,
+                  "next": [
+                    {
+                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
+                      "category": 1,
+                      "code": 2328,
+                      "next": [
+                        {
+                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
+                          "category": 1,
+                          "code": 2322
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
+            "start": 517,
+            "length": 20,
+            "code": 2344,
+            "category": 1,
+            "messageText": {
+              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
+              "category": 1,
+              "code": 2344,
+              "next": [
+                {
+                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
+                  "category": 1,
+                  "code": 2322,
+                  "next": [
+                    {
+                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
+                      "category": 1,
+                      "code": 2328,
+                      "next": [
+                        {
+                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
+                          "category": 1,
+                          "code": 2322
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
+            "start": 945,
+            "length": 20,
+            "code": 2344,
+            "category": 1,
+            "messageText": {
+              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
+              "category": 1,
+              "code": 2344,
+              "next": [
+                {
+                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
+                  "category": 1,
+                  "code": 2322,
+                  "next": [
+                    {
+                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
+                      "category": 1,
+                      "code": 2328,
+                      "next": [
+                        {
+                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
+                          "category": 1,
+                          "code": 2322
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
+            "start": 1129,
+            "length": 20,
+            "code": 2344,
+            "category": 1,
+            "messageText": {
+              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
+              "category": 1,
+              "code": 2344,
+              "next": [
+                {
+                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
+                  "category": 1,
+                  "code": 2322,
+                  "next": [
+                    {
+                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
+                      "category": 1,
+                      "code": 2328,
+                      "next": [
+                        {
+                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
+                          "category": 1,
+                          "code": 2322
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
+            "start": 1195,
+            "length": 20,
+            "code": 2344,
+            "category": 1,
+            "messageText": {
+              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
+              "category": 1,
+              "code": 2344,
+              "next": [
+                {
+                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
+                  "category": 1,
+                  "code": 2322,
+                  "next": [
+                    {
+                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
+                      "category": 1,
+                      "code": 2328,
+                      "next": [
+                        {
+                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
+                          "category": 1,
+                          "code": 2322
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
+            "start": 1416,
+            "length": 21,
+            "code": 2344,
+            "category": 1,
+            "messageText": {
+              "messageText": "Type '(input: Blob) => Blob' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
+              "category": 1,
+              "code": 2344,
+              "next": [
+                {
+                  "messageText": "Type '(input: Blob) => Blob' is not assignable to type '(input: unknown) => unknown'.",
+                  "category": 1,
+                  "code": 2322,
+                  "next": [
+                    {
+                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
+                      "category": 1,
+                      "code": 2328,
+                      "next": [
+                        {
+                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
+                          "category": 1,
+                          "code": 2322
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
+            "start": 1520,
+            "length": 15,
+            "code": 2344,
+            "category": 1,
+            "messageText": {
+              "messageText": "Type '(input: I) => X' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
+              "category": 1,
+              "code": 2344,
+              "next": [
+                {
+                  "messageText": "Type '(input: I) => X' is not assignable to type '(input: unknown) => unknown'.",
+                  "category": 1,
+                  "code": 2322,
+                  "next": [
+                    {
+                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
+                      "category": 1,
+                      "code": 2328,
+                      "next": [
+                        {
+                          "messageText": "Type 'unknown' is not assignable to type 'I'.",
+                          "category": 1,
+                          "code": 2322,
+                          "next": [
+                            {
+                              "messageText": "'I' could be instantiated with an arbitrary type which could be unrelated to 'unknown'.",
+                              "category": 1,
+                              "code": 5082
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
+            "start": 1702,
+            "length": 15,
+            "code": 2344,
+            "category": 1,
+            "messageText": {
+              "messageText": "Type '(input: I) => O' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
+              "category": 1,
+              "code": 2344,
+              "next": [
+                {
+                  "messageText": "Type '(input: I) => O' is not assignable to type '(input: unknown) => unknown'.",
+                  "category": 1,
+                  "code": 2322,
+                  "next": [
+                    {
+                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
+                      "category": 1,
+                      "code": 2328,
+                      "next": [
+                        {
+                          "messageText": "Type 'unknown' is not assignable to type 'I'.",
+                          "category": 1,
+                          "code": 2322,
+                          "next": [
+                            {
+                              "messageText": "'I' could be instantiated with an arbitrary type which could be unrelated to 'unknown'.",
+                              "category": 1,
+                              "code": 5082
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      ],
       "./node_modules/tslib/tslib.d.ts",
       "./node_modules/typescript/lib/lib.dom.d.ts",
       "./node_modules/typescript/lib/lib.dom.iterable.d.ts",
@@ -1894,16 +2457,22 @@
       "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "./node_modules/typescript/lib/lib.scripthost.d.ts",
       "./node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "./src/commands/create-images.ts",
+      "./src/commands/create-metadata.ts",
       "./src/commands/generate-trait-types.ts",
       "./src/commands/generate-traits.ts",
+      "./src/commands/upload-images.ts",
+      "./src/commands/upload-metadata.ts",
+      "./src/commands/validate-trait-files.ts",
       "./src/index.ts",
+      "./src/model/JsonSerializable.ts",
+      "./src/model/TierProbabilities.ts",
+      "./src/model/Trait.ts",
+      "./src/model/TraitConfiguration.ts",
+      "./src/model/TraitTier.ts",
+      "./src/model/TraitType.ts",
       "./src/model/constants.ts",
-      "./src/model/jsonserializable.ts",
-      "./src/model/tierprobabilities.ts",
-      "./src/model/trait.ts",
-      "./src/model/traitconfiguration.ts",
-      "./src/model/traittier.ts",
-      "./src/model/traittype.ts",
+      "./src/model/progress-log.ts",
       "./src/rules/dedup.ts",
       "./src/rules/differentiate.ts",
       "./src/rules/index.ts"
