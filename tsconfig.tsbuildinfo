@@ -326,16 +326,6 @@
         "signature": "04b2123e996b5c865eec449a1c670c10cee24d12b9f1a97979c0dbbceecc3384",
         "affectsGlobalScope": false
       },
-      "./src/commands/create-images.ts": {
-        "version": "47391ca1ec1f32befdaaab7e209554d10a4e8b446d822fbe85a0019bbfb0314a",
-        "signature": "55741638106507dbf5fb38c105c7ea6870629f1078fde64734f7acf514141c6f",
-        "affectsGlobalScope": false
-      },
-      "./src/commands/create-metadata.ts": {
-        "version": "2867777d990f3d6d2caaf8d94c1f572bd823282970b7e8d1fee0dc7bec44bd58",
-        "signature": "4821b5f10b7f1bf0b28e87a0280b321265d84485f661d8bce68553880fb288f1",
-        "affectsGlobalScope": false
-      },
       "./node_modules/@types/node/globals.d.ts": {
         "version": "fb928b21f5a16a1d64a8e2e74a3f389ace89da74820f070f893221213c50aa3c",
         "signature": "fb928b21f5a16a1d64a8e2e74a3f389ace89da74820f070f893221213c50aa3c",
@@ -556,9 +546,24 @@
         "signature": "e238f135b4b905e114c29519b40842fdc52e214306510abcbc764920b5603aaa",
         "affectsGlobalScope": false
       },
+      "./src/commands/convert-trait-types.ts": {
+        "version": "02ce4b64bacfee28275fb8cbbaa4635b6d37fb652d5bc364685ed9ddfc6b0fc9",
+        "signature": "0d0a9cce26760628e24c3a188788ba16ae4c518b0af10c84f45bf6e1efb29ac1",
+        "affectsGlobalScope": false
+      },
+      "./src/commands/create-images.ts": {
+        "version": "47391ca1ec1f32befdaaab7e209554d10a4e8b446d822fbe85a0019bbfb0314a",
+        "signature": "55741638106507dbf5fb38c105c7ea6870629f1078fde64734f7acf514141c6f",
+        "affectsGlobalScope": false
+      },
+      "./src/commands/create-metadata.ts": {
+        "version": "2867777d990f3d6d2caaf8d94c1f572bd823282970b7e8d1fee0dc7bec44bd58",
+        "signature": "4821b5f10b7f1bf0b28e87a0280b321265d84485f661d8bce68553880fb288f1",
+        "affectsGlobalScope": false
+      },
       "./src/model/constants.ts": {
-        "version": "b1abc0c25eb2dd4314825907153372d771639c29c7d25c5f77a6cd3b021684df",
-        "signature": "3227bfded69e9434cf8e103ecba88f4f3712e9aae588567b861131dae136c276",
+        "version": "be55f16ab5ffbcd895dec810e65dca417655aeb00379ea5753c1b9f8841d7bf8",
+        "signature": "4ea58272079c5763ab1f7662b47f1c7af31fa79f7c043f51115bf47e86d206d9",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/chance/index.d.ts": {
@@ -568,7 +573,7 @@
       },
       "./src/commands/generate-trait-types.ts": {
         "version": "1dc8f69d1b1ee71f9655e8b056b25e4e94fbb8c31e2a79fdc1f7d91081eb24ef",
-        "signature": "a4940aef29b1d750ba8f4f574259d769c5b8022089435c735afb47d4f44e73d6",
+        "signature": "ed3fc4a1897f14c3d13c2263e056c72b28f030748404763b0034223fd5862278",
         "affectsGlobalScope": false
       },
       "./src/model/TierProbabilities.ts": {
@@ -648,7 +653,7 @@
       },
       "./src/commands/generate-traits.ts": {
         "version": "9b2549f0a546c0067b21a6034f6ee5fe2059f33436988eaf94990faacb32c027",
-        "signature": "2c798f2cb2521f403a46a7834ee7d84fc4fb4b7a38a09750e5d769c07902c13f",
+        "signature": "52d6ed907727066d6251b47704b10a1239998f8f7832d98869b1eb2ffc177efc",
         "affectsGlobalScope": false
       },
       "./node_modules/nft.storage/dist/src/platform.d.ts": {
@@ -722,7 +727,7 @@
         "affectsGlobalScope": false
       },
       "./src/commands/upload-images.ts": {
-        "version": "43278b9300919833085a75c5347cf5ce92f1fa512dc47ce309b6cee3a8babc55",
+        "version": "afdf9ed393c6c69dab7d06d17028806ec11a57636ae28d4f404b87130d37d578",
         "signature": "ca82942231534e551c7450e83a486925a2e8b65806c0634e93bed69f38bea0fd",
         "affectsGlobalScope": false
       },
@@ -890,21 +895,6 @@
         "version": "a35c3c9a957697fd70aef0bed183fcf1258264c877bf2a12dcd80d6b0c2a6fe4",
         "signature": "a35c3c9a957697fd70aef0bed183fcf1258264c877bf2a12dcd80d6b0c2a6fe4",
         "affectsGlobalScope": false
-      },
-      "../node_modules/@types/bn.js/index.d.ts": {
-        "version": "bc6dd50ac2fc9a7ca6488811b116bd0ddd606338db0bb97852c8fcf757e2d7f5",
-        "signature": "bc6dd50ac2fc9a7ca6488811b116bd0ddd606338db0bb97852c8fcf757e2d7f5",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/pbkdf2/index.d.ts": {
-        "version": "a73a445c1e0a6d0f8b48e8eb22dc9d647896783a7f8991cbbc31c0d94bf1f5a2",
-        "signature": "a73a445c1e0a6d0f8b48e8eb22dc9d647896783a7f8991cbbc31c0d94bf1f5a2",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/secp256k1/index.d.ts": {
-        "version": "3dce33e7eb25594863b8e615f14a45ab98190d85953436750644212d8a18c066",
-        "signature": "3dce33e7eb25594863b8e615f14a45ab98190d85953436750644212d8a18c066",
-        "affectsGlobalScope": false
       }
     },
     "options": {
@@ -913,22 +903,13 @@
       "module": 1,
       "outDir": "./lib",
       "rootDir": "./src",
-      "strict": true,
+      "strict": false,
       "target": 6,
       "composite": true,
       "project": "./tsconfig.json",
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
-      "../node_modules/@types/bn.js/index.d.ts": [
-        "./node_modules/@types/node/index.d.ts"
-      ],
-      "../node_modules/@types/pbkdf2/index.d.ts": [
-        "./node_modules/@types/node/index.d.ts"
-      ],
-      "../node_modules/@types/secp256k1/index.d.ts": [
-        "./node_modules/@types/node/index.d.ts"
-      ],
       "./node_modules/@ipld/car/types/api.d.ts": [
         "./node_modules/multiformats/types/cid.d.ts"
       ],
@@ -1413,6 +1394,11 @@
         "./node_modules/nft.storage/dist/src/gateway.d.ts",
         "./node_modules/nft.storage/dist/src/lib/interface.d.ts",
         "./node_modules/nft.storage/dist/src/platform.d.ts"
+      ],
+      "./src/commands/convert-trait-types.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/signale/index.d.ts"
       ],
       "./src/commands/create-images.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
@@ -1475,15 +1461,6 @@
       ]
     },
     "exportedModulesMap": {
-      "../node_modules/@types/bn.js/index.d.ts": [
-        "./node_modules/@types/node/index.d.ts"
-      ],
-      "../node_modules/@types/pbkdf2/index.d.ts": [
-        "./node_modules/@types/node/index.d.ts"
-      ],
-      "../node_modules/@types/secp256k1/index.d.ts": [
-        "./node_modules/@types/node/index.d.ts"
-      ],
       "./node_modules/@ipld/car/types/api.d.ts": [
         "./node_modules/multiformats/types/cid.d.ts"
       ],
@@ -1969,6 +1946,10 @@
         "./node_modules/nft.storage/dist/src/lib/interface.d.ts",
         "./node_modules/nft.storage/dist/src/platform.d.ts"
       ],
+      "./src/commands/convert-trait-types.ts": [
+        "./node_modules/@oclif/command/lib/index.d.ts",
+        "./node_modules/@oclif/parser/lib/flags.d.ts"
+      ],
       "./src/commands/create-images.ts": [
         "./node_modules/@oclif/command/lib/index.d.ts"
       ],
@@ -2013,9 +1994,6 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "../node_modules/@types/bn.js/index.d.ts",
-      "../node_modules/@types/pbkdf2/index.d.ts",
-      "../node_modules/@types/secp256k1/index.d.ts",
       "./node_modules/@ipld/car/types/api.d.ts",
       "./node_modules/@oclif/command/lib/command.d.ts",
       "./node_modules/@oclif/command/lib/flags.d.ts",
@@ -2136,289 +2114,7 @@
       "./node_modules/nft.storage/dist/src/lib.d.ts",
       "./node_modules/nft.storage/dist/src/lib/interface.d.ts",
       "./node_modules/nft.storage/dist/src/platform.d.ts",
-      [
-        "./node_modules/nft.storage/dist/src/token.d.ts",
-        [
-          {
-            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
-            "start": 465,
-            "length": 20,
-            "code": 2344,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
-              "category": 1,
-              "code": 2344,
-              "next": [
-                {
-                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
-                  "category": 1,
-                  "code": 2322,
-                  "next": [
-                    {
-                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
-                      "category": 1,
-                      "code": 2328,
-                      "next": [
-                        {
-                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
-                          "category": 1,
-                          "code": 2322
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
-            "start": 517,
-            "length": 20,
-            "code": 2344,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
-              "category": 1,
-              "code": 2344,
-              "next": [
-                {
-                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
-                  "category": 1,
-                  "code": 2322,
-                  "next": [
-                    {
-                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
-                      "category": 1,
-                      "code": 2328,
-                      "next": [
-                        {
-                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
-                          "category": 1,
-                          "code": 2322
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
-            "start": 945,
-            "length": 20,
-            "code": 2344,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
-              "category": 1,
-              "code": 2344,
-              "next": [
-                {
-                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
-                  "category": 1,
-                  "code": 2322,
-                  "next": [
-                    {
-                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
-                      "category": 1,
-                      "code": 2328,
-                      "next": [
-                        {
-                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
-                          "category": 1,
-                          "code": 2322
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
-            "start": 1129,
-            "length": 20,
-            "code": 2344,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
-              "category": 1,
-              "code": 2344,
-              "next": [
-                {
-                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
-                  "category": 1,
-                  "code": 2322,
-                  "next": [
-                    {
-                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
-                      "category": 1,
-                      "code": 2328,
-                      "next": [
-                        {
-                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
-                          "category": 1,
-                          "code": 2322
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
-            "start": 1195,
-            "length": 20,
-            "code": 2344,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '(input: Blob) => URL' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
-              "category": 1,
-              "code": 2344,
-              "next": [
-                {
-                  "messageText": "Type '(input: Blob) => URL' is not assignable to type '(input: unknown) => unknown'.",
-                  "category": 1,
-                  "code": 2322,
-                  "next": [
-                    {
-                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
-                      "category": 1,
-                      "code": 2328,
-                      "next": [
-                        {
-                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
-                          "category": 1,
-                          "code": 2322
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
-            "start": 1416,
-            "length": 21,
-            "code": 2344,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '(input: Blob) => Blob' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
-              "category": 1,
-              "code": 2344,
-              "next": [
-                {
-                  "messageText": "Type '(input: Blob) => Blob' is not assignable to type '(input: unknown) => unknown'.",
-                  "category": 1,
-                  "code": 2322,
-                  "next": [
-                    {
-                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
-                      "category": 1,
-                      "code": 2328,
-                      "next": [
-                        {
-                          "messageText": "Type 'unknown' is not assignable to type 'Blob'.",
-                          "category": 1,
-                          "code": 2322
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
-            "start": 1520,
-            "length": 15,
-            "code": 2344,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '(input: I) => X' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
-              "category": 1,
-              "code": 2344,
-              "next": [
-                {
-                  "messageText": "Type '(input: I) => X' is not assignable to type '(input: unknown) => unknown'.",
-                  "category": 1,
-                  "code": 2322,
-                  "next": [
-                    {
-                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
-                      "category": 1,
-                      "code": 2328,
-                      "next": [
-                        {
-                          "messageText": "Type 'unknown' is not assignable to type 'I'.",
-                          "category": 1,
-                          "code": 2322,
-                          "next": [
-                            {
-                              "messageText": "'I' could be instantiated with an arbitrary type which could be unrelated to 'unknown'.",
-                              "category": 1,
-                              "code": 5082
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "file": "./node_modules/nft.storage/dist/src/token.d.ts",
-            "start": 1702,
-            "length": 15,
-            "code": 2344,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '(input: I) => O' does not satisfy the constraint '((input: unknown) => unknown) | ((input: unknown) => unknown)'.",
-              "category": 1,
-              "code": 2344,
-              "next": [
-                {
-                  "messageText": "Type '(input: I) => O' is not assignable to type '(input: unknown) => unknown'.",
-                  "category": 1,
-                  "code": 2322,
-                  "next": [
-                    {
-                      "messageText": "Types of parameters 'input' and 'input' are incompatible.",
-                      "category": 1,
-                      "code": 2328,
-                      "next": [
-                        {
-                          "messageText": "Type 'unknown' is not assignable to type 'I'.",
-                          "category": 1,
-                          "code": 2322,
-                          "next": [
-                            {
-                              "messageText": "'I' could be instantiated with an arbitrary type which could be unrelated to 'unknown'.",
-                              "category": 1,
-                              "code": 5082
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        ]
-      ],
+      "./node_modules/nft.storage/dist/src/token.d.ts",
       "./node_modules/tslib/tslib.d.ts",
       "./node_modules/typescript/lib/lib.dom.d.ts",
       "./node_modules/typescript/lib/lib.dom.iterable.d.ts",
@@ -2457,6 +2153,7 @@
       "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "./node_modules/typescript/lib/lib.scripthost.d.ts",
       "./node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "./src/commands/convert-trait-types.ts",
       "./src/commands/create-images.ts",
       "./src/commands/create-metadata.ts",
       "./src/commands/generate-trait-types.ts",

@@ -17,7 +17,9 @@ const NUM_REQUIRED = 9001;
 const chance = new Chance();
 
 function getTraitArray(type: TRAIT_TYPE, traits: any) {
-  return Object.values(TRAIT_TIER).flatMap((tier) => traits[type][tier]);
+  return Object.values(TRAIT_TIER)
+    .flatMap((tier) => traits[type][tier])
+    .filter((trait) => trait);
 }
 
 function getWeightedArray(
@@ -30,22 +32,33 @@ function getWeightedArray(
   Object.values(TRAIT_TIER)
     .map((tier) => tier as TRAIT_TIER)
     .forEach((tier) => {
-      traits[type][tier].forEach(() => {
-        weightedArray.push(tierProbabilities[tier]);
-      });
+      if (traits[type][tier]) {
+        traits[type][tier].forEach(() => {
+          weightedArray.push(tierProbabilities[tier]);
+        });
+      }
     });
 
   return weightedArray;
 }
 
 function getTraitTier(type: TRAIT_TYPE, trait: string, traits: any) {
-  if (traits[type][TRAIT_TIER.TIER_1].indexOf(trait) >= 0) {
+  if (
+    traits[type][TRAIT_TIER.TIER_1] &&
+    traits[type][TRAIT_TIER.TIER_1].indexOf(trait) >= 0
+  ) {
     return TRAIT_TIER.TIER_1;
   }
-  if (traits[type][TRAIT_TIER.TIER_2].indexOf(trait) >= 0) {
+  if (
+    traits[type][TRAIT_TIER.TIER_2] &&
+    traits[type][TRAIT_TIER.TIER_2].indexOf(trait) >= 0
+  ) {
     return TRAIT_TIER.TIER_2;
   }
-  if (traits[type][TRAIT_TIER.TIER_3].indexOf(trait) >= 0) {
+  if (
+    traits[type][TRAIT_TIER.TIER_3] &&
+    traits[type][TRAIT_TIER.TIER_3].indexOf(trait) >= 0
+  ) {
     return TRAIT_TIER.TIER_3;
   }
 
@@ -190,24 +203,29 @@ export default class GenerateTraits extends Command {
 
     const numRequired: number = Number(flags.number) || NUM_REQUIRED;
 
-    const { generationAttemptCount, traits } = this.generateTraits(
-      numRequired,
-      traitTypes
-    );
+    try {
+      const { generationAttemptCount, traits } = this.generateTraits(
+        numRequired,
+        traitTypes
+      );
 
-    const t1 = performance.now();
+      const t1 = performance.now();
 
-    let outputFile = 'traits.json';
-    if (flags.output) {
-      outputFile = flags.output;
+      let outputFile = 'traits.json';
+      if (flags.output) {
+        outputFile = flags.output;
+      }
+
+      signale.info(`Writing traits to ${outputFile}`);
+
+      fs.writeFileSync(outputFile, JSON.stringify(traits));
+
+      signale.success(' Trait Generation complete');
+      signale.info('Total Time: ', Math.round(t1 - t0));
+      signale.info('Total Iterations: ', generationAttemptCount);
+    } catch (e) {
+      console.error(e);
+      throw e;
     }
-
-    signale.info(`Writing traits to ${outputFile}`);
-
-    fs.writeFileSync(outputFile, JSON.stringify(traits));
-
-    signale.success(' Trait Generation complete');
-    signale.info('Total Time: ', Math.round(t1 - t0));
-    signale.info('Total Iterations: ', generationAttemptCount);
   }
 }

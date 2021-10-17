@@ -11,19 +11,19 @@
       "name": "generate-traits",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/bin/run",
-      "args": ["generate-traits", "trait-types.json"],
+      "args": ["generate-traits", "./workspace/live/trait-types.json"],
       "preLaunchTask": "tsc: build - tsconfig.json",
       "outFiles": ["${workspaceFolder}/lib/**/*.js"]
     },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "upload-images",
-      "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/bin/run",
-      "args": ["upload-images"],
-      "preLaunchTask": "tsc: build - tsconfig.json",
-      "outFiles": ["${workspaceFolder}/lib/**/*.js"]
-    }
+    // {
+    //   "type": "node",
+    //   "request": "launch",
+    //   "name": "upload-images",
+    //   "skipFiles": ["<node_internals>/**"],
+    //   "program": "${workspaceFolder}/bin/run",
+    //   "args": ["upload-images"],
+    //   "preLaunchTask": "tsc: build - tsconfig.json",
+    //   "outFiles": ["${workspaceFolder}/lib/**/*.js"]
+    // }
   ]
 }
