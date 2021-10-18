@@ -17,9 +17,7 @@ const NUM_REQUIRED = 9001;
 const chance = new Chance();
 
 function getTraitArray(type: TRAIT_TYPE, traits: any) {
-  return Object.values(TRAIT_TIER)
-    .flatMap((tier) => traits[type][tier])
-    .filter((trait) => trait);
+  return Object.values(TRAIT_TIER).flatMap((tier) => traits[type][tier]);
 }
 
 function getWeightedArray(
@@ -72,14 +70,18 @@ function getTrait(
 ): string {
   let mandatoryMultiplier = 0; // A multiplier for whether a zone is mandatory or not.
   if (MANDATORY_TRAIT_ZONES.indexOf(type) >= 0) {
-    mandatoryMultiplier = 1; // If mandatory, the multiplier is always 1
-  } else {
-    // If not mandatory, there's 50% chance it will be used
-    mandatoryMultiplier = chance.integer({ min: 0, max: 1 });
+    // Make sure something is selected for a mandatory trait type
+    let selectedTrait = chance.weighted(traitArray, weightedArray);
+    while (!selectedTrait) {
+      selectedTrait = chance.weighted(traitArray, weightedArray);
+    }
+    return selectedTrait;
   }
 
-  const selectedTrait = chance.weighted(traitArray, weightedArray);
-  return mandatoryMultiplier === 1 ? selectedTrait : '';
+  // If not mandatory, there's 50% chance it will be used
+  const isSelected = chance.integer({ min: 0, max: 1 });
+
+  return isSelected === 1 ? chance.weighted(traitArray, weightedArray) : '';
 }
 
 export default class GenerateTraits extends Command {
@@ -117,9 +119,9 @@ export default class GenerateTraits extends Command {
     traitTypes: any
   ): { traits: Array<string[]>; generationAttemptCount: number } {
     const tierProbabilities: TierProbabilities = {
-      [TRAIT_TIER.TIER_1]: 69,
-      [TRAIT_TIER.TIER_2]: 30,
-      [TRAIT_TIER.TIER_3]: 1,
+      [TRAIT_TIER.TIER_1]: 45,
+      [TRAIT_TIER.TIER_2]: 50,
+      [TRAIT_TIER.TIER_3]: 15,
     };
 
     const traits: Array<string[]> = [];
@@ -154,16 +156,16 @@ export default class GenerateTraits extends Command {
 
           selectedTraits.push(selectedTrait);
 
-          if (selectedTraitTier) {
-            // Update new probabilities based on selection
-            switch (selectedTraitTier) {
-              case TRAIT_TIER.TIER_2:
-                tierProbabilities[TRAIT_TIER.TIER_2] /= 2; // Rare items get increasingly rare.
-                break;
-              case TRAIT_TIER.TIER_3:
-                tierProbabilities[TRAIT_TIER.TIER_2] = 0; // No more chances if you get an extremely rare
-            }
-          }
+          // if (selectedTraitTier) {
+          //   // Update new probabilities based on selection
+          //   switch (selectedTraitTier) {
+          //     case TRAIT_TIER.TIER_2:
+          //       tierProbabilities[TRAIT_TIER.TIER_2] /= 2; // Rare items get increasingly rare.
+          //       break;
+          //     case TRAIT_TIER.TIER_3:
+          //       tierProbabilities[TRAIT_TIER.TIER_2] = 0; // No more chances if you get an extremely rare
+          //   }
+          // }
         });
 
       let validatedTraits: string[] | null = selectedTraits;

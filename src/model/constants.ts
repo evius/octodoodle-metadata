@@ -8,10 +8,10 @@ export enum TRAIT_TIER {
 export enum TRAIT_TYPE {
   BACKGROUND = 'Background',
   SKIN = 'Skin',
-  MOUTH = 'Mouth',
   SUCKERS = 'Suckers',
   EYES = 'Eyes',
   CLOTHING = 'Clothing',
+  MOUTH = 'Mouth',
   HEAD = 'Head',
   TENTACLE_1 = 'Tentacle 1',
   TENTACLE_2 = 'Tentacle 2',
