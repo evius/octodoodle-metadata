@@ -25,15 +25,17 @@ export class ValidateTraitFilesCommand extends Command {
 
     Object.keys(traitTypes).forEach((type) => {
       Object.keys(traitTypes[type]).forEach((tier) => {
-        traitTypes[type][tier].forEach((trait) => {
-          const fileName = `${args.assetsPath}/${trait
-            .replace(/\s/g, '_')
-            .replace(/\'/g, '_')}.png`;
-          signale.info('Validating file: ', fileName);
-          if (!fs.existsSync(fileName)) {
-            missingTraits.push(`${type}:${tier}:${trait}`);
-          }
-        });
+        traitTypes[type][tier]
+          .filter((trait) => trait)
+          .forEach((trait) => {
+            const fileName = `${args.assetsPath}/${trait
+              .replace(/\s/g, '_')
+              .replace(/\'/g, '_')}.png`;
+            signale.info('Validating file: ', fileName);
+            if (!fs.existsSync(fileName)) {
+              missingTraits.push(`${type}:${tier}:${trait}`);
+            }
+          });
       });
     });
 

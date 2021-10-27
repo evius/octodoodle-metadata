@@ -1,0 +1,202 @@
+{
+  "Background": {
+    "Tier 2": [
+      "Let's Party",
+      "Lavender Rainbow",
+      "Lemon Sour Rainbow",
+      "Golden Glow",
+      "Clouds",
+      "Clouds Rainbow",
+      "Grey Gray"
+    ],
+    "Tier 1": [
+      "Lavender",
+      "Apple",
+      "Lemon Sour",
+      "Aqua",
+      "Rose",
+      "Tangerine",
+      "Azure",
+      "Peachy Keen",
+      "Green Fade"
+    ],
+    "Tier 3": [
+      "You Got A Friend In Me",
+      "Purple Haze",
+      "Snow Day",
+      "Party On",
+      "Hocus Pocus",
+      "Hocus Pocus Rainbow"
+    ]
+  },
+  "Skin": {
+    "Tier 1": [
+      "Wild Blackberry",
+      "Perky Peach",
+      "Strawberry Banana Smoothie",
+      "Blue Margarita",
+      "Lemon Meringue Pie",
+      "Kiwi"
+    ],
+    "Tier 3": ["Camo-mari Water", "Helter Skelter", "Camo-mari Coral"],
+    "Tier 2": ["Very Cherry"]
+  },
+  "Suckers": {
+    "Tier 1": ["", "", "", "", "", "", "", "", "", ""],
+    "Tier 2": ["", "", "", "", "", "", "", "", "", ""],
+    "Tier 3": ["", "", "Sweety Suckers"]
+  },
+  "Eyes": {
+    "Tier 1": [
+      "Cute Blue",
+      "Cute Red",
+      "Cute Green",
+      "Cute Purple",
+      "Eye Roll",
+      "Worried",
+      "Sneaky",
+      "Angry",
+      "Monobrow",
+      "Quizzical",
+      "Cute Puffy Cheek",
+      "Sad"
+    ],
+    "Tier 3": ["Skeleton", "Hypnotic", "Telescopic", "Smiley Faces", "Yaargh"],
+    "Tier 2": [
+      "Big",
+      "Glossy",
+      "Heavybrows",
+      "Hollow",
+      "Rusty Robot",
+      "Big Sad",
+      "Monobrow Angry",
+      "Crying",
+      "Winking Cutie",
+      "Spiral",
+      "Glasses"
+    ]
+  },
+  "Mouth": {
+    "Tier 1": [
+      "Happy",
+      "Baffled",
+      "Need My Uppers",
+      "Befuddled",
+      "Yug Yug",
+      "Cutie Mouth 1",
+      "Cutie Mouth 2"
+    ],
+    "Tier 2": [
+      "Lol",
+      "Oh Shit",
+      "Gummy Lips",
+      "Cheeky",
+      "Vlah",
+      "Yuck",
+      "Raargh",
+      "Mmmm",
+      "Graaagh"
+    ],
+    "Tier 3": [
+      "Hubba Hubba",
+      "Cigarette",
+      "Give Me Donuts",
+      "Yum Yum",
+      "Nom Nom",
+      "Tobacco Pipe"
+    ]
+  },
+  "Head": {
+    "Tier 2": [
+      "Merlin",
+      "Uncle Sam",
+      "Bowler",
+      "Sorting Hat",
+      "Matey",
+      "Shower Cap",
+      "Ships Ahoy",
+      "Unicorn Hair",
+      "Davy Crockett",
+      "Mow Hawk",
+      "Caveman",
+      "Indiana Jones"
+    ],
+    "Tier 1": [
+      "Horns",
+      "Star Fish Hat",
+      "Yellow Beanie",
+      "Scooter",
+      "Paper Party Hat",
+      "Blue Beanie",
+      "Bear Beanie",
+      "Paper Hat",
+      "Hoppity Hop",
+      "Clown Wig"
+    ],
+    "Tier 3": [
+      "Beam Me Up",
+      "Viking Hat",
+      "Baby It's Cold Outside",
+      "Jester",
+      "Yo Ho Ho",
+      "I Put A Spell On You",
+      "Jellyfish",
+      "Jimmy Hat"
+    ]
+  },
+  "Clothing": {
+    "Tier 1": [
+      "Dog Collar",
+      "Nekerchief",
+      "Blue Scarf",
+      "Star Fish",
+      "Angry Emoji",
+      "Smiley Emoji"
+    ],
+    "Tier 2": [
+      "Autumn Scarf",
+      "Purple Scarf",
+      "Bow Tie",
+      "Wooly Scarf",
+      "Love Heart",
+      "Cheeky Emoji",
+      "Sleeping Emoji"
+    ],
+    "Tier 3": ["Shell", "Fig Leaf", "Moon Bag", "ROFL Emoji", "Hot Emoji"]
+  },
+  "Tentacle 1": {
+    "Tier 3": ["Rubber Duckie", "Polly", "Fish Finger", "Black Bird"],
+    "Tier 2": ["White Glove", "Abracadabra", "Cupcake"],
+    "Tier 1": ["", "", "", "", "", ""]
+  },
+  "Tentacle 2": {
+    "Tier 2": [
+      "Snails",
+      "Skull",
+      "Shrooms",
+      "Red Balloon",
+      "Puss",
+      "Scrub A Dub Dub",
+      "Hook",
+      "Fly Me Away",
+      "Bam Bam",
+      "Go Fly A Kite",
+      "Hip Hip Hooray",
+      "Bat"
+    ],
+    "Tier 3": [
+      "Tribal Skull",
+      "Magic Puss",
+      "Not Quite A Nimbus",
+      "You Shall Not Pass",
+      "Fly Me To The Moon",
+      "Mittens"
+    ],
+    "Tier 1": ["Gold Fish"]
+  },
+  "Object": {
+    "Tier 1": [""],
+    "Tier 2": [""],
+    "Tier 3": [""]
+  }
+}

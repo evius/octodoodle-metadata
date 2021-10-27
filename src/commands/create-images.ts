@@ -69,6 +69,9 @@ export class CreateImagesCommand extends Command {
           input: imageFile,
         }))
       )
+      .jpeg({
+        quality: 99,
+      })
       .toFile(`${args.output}/${i + 1}.jpg`, (err) => {
         if (err) {
           signale.error(err);

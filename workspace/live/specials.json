@@ -1,0 +1,62 @@
+{
+  "wizard": [
+    "Grey Gray",
+    "Blue Margarita",
+    "",
+    "Sneaky",
+    "Purple Scarf",
+    "How You Doing",
+    "Sorting Hat",
+    "Black Bird",
+    "You Shall Not Pass",
+    "Cauldron"
+  ],
+  "witch": [
+    "Hocus Pocus",
+    "Kiwi",
+    "",
+    "Cute Puffy Cheek",
+    "",
+    "Vlah",
+    "I Put A Spell On You",
+    "Abracadabra",
+    "Magic Puss",
+    "Cauldron"
+  ],
+  "rub-a-dub-dub": [
+    "Clouds",
+    "Kiwi",
+    "",
+    "Cute Blue",
+    "Shell",
+    "Oooo",
+    "Shower Cap",
+    "Rubber Duckie",
+    "Scrub A Dub Dub",
+    "Splish Splash"
+  ],
+  "pirate": [
+    "You Got A Friend In Me",
+    "Perky Peach",
+    "",
+    "Yaargh",
+    "Wooly Scarf",
+    "Cigarette",
+    "Yo Ho Ho",
+    "Polly",
+    "Hook",
+    "Row Row Row..."
+  ],
+  "ahoy": [
+    "Clouds",
+    "Lemon Meringue Pie",
+    "",
+    "Heavybrows",
+    "Blue Scarf",
+    "Tobacco Pipe",
+    "Ships Ahoy",
+    "Fish Finger",
+    "",
+    "Row Row Row..."
+  ]
+}

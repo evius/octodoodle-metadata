@@ -6,4 +6,5 @@
 /tmp
 /yarn.lock
 node_modules
-workspace
+workspace/test
+workspace/live/images

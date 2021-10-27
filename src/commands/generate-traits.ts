@@ -68,20 +68,22 @@ function getTrait(
   traitArray: Array<string>,
   weightedArray: Array<number>
 ): string {
-  let mandatoryMultiplier = 0; // A multiplier for whether a zone is mandatory or not.
-  if (MANDATORY_TRAIT_ZONES.indexOf(type) >= 0) {
-    // Make sure something is selected for a mandatory trait type
-    let selectedTrait = chance.weighted(traitArray, weightedArray);
-    while (!selectedTrait) {
-      selectedTrait = chance.weighted(traitArray, weightedArray);
-    }
-    return selectedTrait;
-  }
+  // let mandatoryMultiplier = 0; // A multiplier for whether a zone is mandatory or not.
+  // if (MANDATORY_TRAIT_ZONES.indexOf(type) >= 0) {
+  //   // Make sure something is selected for a mandatory trait type
+  //   let selectedTrait = chance.weighted(traitArray, weightedArray);
+  //   while (!selectedTrait) {
+  //     selectedTrait = chance.weighted(traitArray, weightedArray);
+  //   }
+  //   return selectedTrait;
+  // }
 
-  // If not mandatory, there's 50% chance it will be used
-  const isSelected = chance.integer({ min: 0, max: 1 });
+  // // If not mandatory, there's 50% chance it will be used
+  // const isSelected = chance.integer({ min: 0, max: 1 });
 
-  return isSelected === 1 ? chance.weighted(traitArray, weightedArray) : '';
+  // return isSelected === 1 ? chance.weighted(traitArray, weightedArray) : '';
+
+  return chance.weighted(traitArray, weightedArray);
 }
 
 export default class GenerateTraits extends Command {

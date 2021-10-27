@@ -13,6 +13,7 @@ export enum TRAIT_TYPE {
   CLOTHING = 'Clothing',
   MOUTH = 'Mouth',
   HEAD = 'Head',
+  OBJECT = 'Object',
   TENTACLE_1 = 'Tentacle 1',
   TENTACLE_2 = 'Tentacle 2',
 }
