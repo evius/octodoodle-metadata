@@ -7,9 +7,9 @@
     "Purple Scarf",
     "How You Doing",
     "Sorting Hat",
+    "Cauldron",
     "Black Bird",
-    "You Shall Not Pass",
-    "Cauldron"
+    "You Shall Not Pass"
   ],
   "witch": [
     "Hocus Pocus",
@@ -19,9 +19,9 @@
     "",
     "Vlah",
     "I Put A Spell On You",
+    "Cauldron",
     "Abracadabra",
-    "Magic Puss",
-    "Cauldron"
+    "Magic Puss"
   ],
   "rub-a-dub-dub": [
     "Clouds",
@@ -31,9 +31,9 @@
     "Shell",
     "Oooo",
     "Shower Cap",
+    "Splish Splash",
     "Rubber Duckie",
-    "Scrub A Dub Dub",
-    "Splish Splash"
+    "Scrub A Dub Dub"
   ],
   "pirate": [
     "You Got A Friend In Me",
@@ -43,9 +43,9 @@
     "Wooly Scarf",
     "Cigarette",
     "Yo Ho Ho",
+    "Row Row Row...",
     "Polly",
-    "Hook",
-    "Row Row Row..."
+    "Hook"
   ],
   "ahoy": [
     "Clouds",
@@ -55,8 +55,8 @@
     "Blue Scarf",
     "Tobacco Pipe",
     "Ships Ahoy",
+    "Row Row Row...",
     "Fish Finger",
-    "",
-    "Row Row Row..."
+    ""
   ]
 }

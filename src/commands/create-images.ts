@@ -99,7 +99,7 @@ export class CreateImagesCommand extends Command {
     } else {
       progressBar.start(traits.length, 0);
 
-      for (let i = 0; i < traits.length - 1; i++) {
+      for (let i = 0; i < traits.length; i++) {
         this.createImage(traits, i, args, progressBar);
       }
     }
