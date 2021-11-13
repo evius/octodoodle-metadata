@@ -1,8 +1,8 @@
 {
   "name": "Octodoodles",
   "description": "Octodoodles is a family created NFT collection of 5000 beautiful, fun and artful doodles on the Ethereum Blockchain.",
-  "image": "https://gateway.pinata.cloud/ipfs/QmPLByAfavVPdPq6Nhpdz8Wfmjh37sPzZGZ2SwqVaHcGR7",
+  "image": "https://gateway.pinata.cloud/ipfs/QmQBcfHmbxUvKykQxrGZ8wpjyTVcoARXJr55jPkrqDQsu6",
   "external_link": "https://octodoodles.com",
   "seller_fee_basis_points": 250,
-  "fee_recipient": "0x10e1B58176a29C20E955ec6Db2f45b86Df0fCB60"
+  "fee_recipient": "0xf87135C995eCF1DF90c4eAc43f0A8Fd8b97b092b"
 }
